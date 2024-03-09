@@ -1,0 +1,340 @@
+:root {
+  --clr-purple-dark: hsl(273, 85%, 13%);
+  --clr-green: hsl(150, 100%, 63%);
+  --clr-purple-plain: hsl(271, 12%, 34%);
+  --clr-purple-light: hsl(276, 100%, 99%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-base: "Manrope", sans-serif;
+  --ff-accent: "Fraunces", serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* General styling */
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1.125rem;
+  color: var(--clr-purple-dark);
+}
+
+h1, h2, h3 {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-semi-bold);
+}
+
+h1 {
+  color: var(--clr-white);
+  font-size: 5rem;
+  line-height: 1;
+}
+
+h2 {
+  color: var(--clr-white);
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.25;
+}
+
+.wrapper {
+  overflow: clip;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  max-width: 1114px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* Buttons */
+
+button {
+  font-size: 1.125rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-purple-dark);
+  background-color: var(--clr-green);
+  width: 190px;
+  height: 61px;
+  border: 2px solid var(--clr-green);
+  cursor: pointer;
+  transition: ease-in .3s;
+}
+
+button:hover {
+  color: var(--clr-green);
+  background-color: var(--clr-purple-dark);
+}
+
+button.secondary {
+  color: var(--clr-white);
+  background-color: var(--clr-purple-dark);
+  border: none;
+  border-bottom: 2px solid var(--clr-green);
+  width: 160px;
+  height: 35px;
+}
+
+button.secondary:hover {
+  color: var(--clr-green);
+}
+
+/* Header */
+
+header {
+  background-color: var(--clr-purple-dark);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 56px;
+}
+
+.hero,
+.info {
+  background-color: var(--clr-purple-dark);
+  position: relative;
+}
+
+.hero .curve,
+.info .curve-cards {
+  position: relative;
+  display: block;
+  height: 140px;
+  bottom: -140px;
+  margin-top: -100px;
+  overflow: hidden;
+}
+
+.hero .curve::after,
+.info .curve-cards::after {
+  border-radius: 50%;
+  height: 100px;
+	bottom: 0;
+  transform: translate(-5%,-100%);
+	-ms-transform: translate(-5%,-100%);
+	-webkit-transform: translate(-5%,-100%);
+	content: "";
+	position: absolute;
+	width: 110%;
+	z-index: 2;
+  background: var(--clr-purple-dark);
+}
+
+.info .curve-cards::after {
+  background: var(--clr-purple-light);
+}
+
+.hero-info {
+  max-width: 635px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 55px;
+  padding-bottom: 210px;
+}
+
+.hero-info h1 {
+  margin-bottom: 37px;
+}
+
+.hero-info h1 span {
+  text-decoration: underline var(--clr-green);
+}
+
+.hero-img {
+  position: absolute;
+  width: 767px;
+  height: 441;
+  top: 350px;
+  left: 50%;
+  margin-left: -383.5px;
+  z-index: 3;
+}
+
+.bg-pattern-1 {
+  position: absolute;
+  width: 270px;
+  top: 50px;
+  left: -280px;
+}
+
+.bg-pattern-2 {
+  position: absolute;
+  top: 250px;
+  right: -200px;
+}
+
+.info {
+  background-color: var(--clr-purple-light);
+  padding-top: 255px;
+  margin-bottom: 171px;
+}
+
+.info .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  max-width: 350px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card-number-border {
+  border: 1px solid var(--clr-purple-dark);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  position: relative;
+}
+
+.card-number-nmbr {
+  font-size: 1.5rem;
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-semi-bold);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -7px;
+  margin-top: -1.125rem;
+}
+
+.card-info {
+  text-align: center;
+}
+
+.card-info h3 {
+  margin-bottom: 28px}
+
+.founder .container {
+  position: relative;
+}
+
+.founder-img {
+  width: 477px;
+  margin-top: 110px;
+  margin-bottom: 230px;
+}
+
+.founder-info {
+  background-color: var(--clr-purple-dark);
+  max-width: 730px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  position: absolute;
+  top: 173px;
+  left: 382px;
+}
+
+.founder-info p {
+  color: var(--clr-white);
+}
+
+.bg-pattern-3 {
+  position: absolute;
+  top: 436px;
+  left: 819px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 57px;
+  margin-bottom: 110px;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  cursor: pointer;
+}
+
+.social-icon {
+  transition: fill 0.3s ease;
+}
+
+.social-icon:hover {
+  fill: var(--clr-purple-dark);
+}

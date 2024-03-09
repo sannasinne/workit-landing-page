@@ -134,8 +134,9 @@ button.secondary {
   background-color: var(--clr-purple-dark);
   border: none;
   border-bottom: 2px solid var(--clr-green);
-  width: 160px;
-  height: 35px;
+  width: auto;
+  height: auto;
+  padding: 0;
 }
 
 button.secondary:hover {
@@ -337,4 +338,51 @@ ul li {
 
 .social-icon:hover {
   fill: var(--clr-purple-dark);
+}
+
+/* Media queries */
+
+/* Tablet styles */
+
+@media (max-width: 1120px) {
+  header .container {
+    padding-top: 32px;
+  }
+
+  h1 {
+    font-size: 3.75rem;
+    
+  }
+
+  button {
+    font-size: 1rem;
+    width: 133px;
+    height: 55px;
+  }
+
+  .hero-info {
+    max-width: 550px;
+    padding-bottom: 100px;
+  }
+
+  .hero-img {
+    width: 514px;
+    height: 296;
+    top: 290px;
+    left: 50%;
+    margin-left: -257px;
+    z-index: 3;
+  }
+
+  .bg-pattern-1 {
+    width: 270px;
+    top: 40px;
+    left: -200px;
+  }
+  
+  .bg-pattern-2 {
+    top: 200px;
+    right: -130px;
+  }
+
 }
